@@ -1,0 +1,188 @@
+/*-----Media Query-----*/
+@media screen and (max-width: 319px) {
+    * {
+        display: none !important;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white !important;
+    }
+
+    body:before {
+        content: "Try in Big Screen!";
+        color: #1d2124;
+        font-weight: 600;
+    }
+}
+
+/*Landscape*/
+/* Mobile Devices */
+@media (max-height: 575px) and (max-width: 1200px) and (orientation: landscape) {
+
+}
+
+/* Mobile Devices */
+@media screen and (min-width: 320px) and (max-width: 575px) {
+
+    .w-xs-25 { width: 25% !important;}
+    .w-xs-50 { width: 50% !important;}
+    .w-xs-75 { width: 75% !important;}
+    .w-xs-100 { width: 100% !important;}
+
+    /*Font Size*/
+    .f-xs-10 {font-size: 10px !important;}
+    .f-xs-12 {font-size: 12px !important;}
+    .f-xs-14 {font-size: 14px !important;}
+    .f-xs-16 {font-size: 16px !important;}
+    .f-xs-18 {font-size: 18px !important;}
+    .f-xs-19 {font-size: 19px !important;}
+    .f-xs-20 {font-size: 20px !important;}
+    .f-xs-22 {font-size: 22px !important;}
+    .f-xs-24 {font-size: 24px !important;}
+
+    .pkg-crd-service-list li {
+        width: 100%;
+    }
+
+    .app-download-btn {
+        height: 42px;
+    }
+
+    .search-field button {
+        padding: 5px 10px !important;
+    }
+
+    .search-field input {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 1; /* number of lines to show */
+        -webkit-box-orient: vertical;
+    }
+
+    .nav-book-btn {
+        width: fit-content !important;
+        font-weight: 400 !important;
+    }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+
+    /*Font Size*/
+    .f-sm-10 {font-size: 10px !important;}
+    .f-sm-12 {font-size: 12px !important;}
+    .f-sm-14 {font-size: 14px !important;}
+    .f-sm-16 {font-size: 16px !important;}
+    .f-sm-18 {font-size: 18px !important;}
+    .f-sm-19 {font-size: 19px !important;}
+    .f-sm-20 {font-size: 20px !important;}
+    .f-sm-22 {font-size: 22px !important;}
+    .f-sm-24 {font-size: 24px !important;}
+
+    .w-sm-25 { width: 25% !important;}
+    .w-sm-50 { width: 50% !important;}
+    .w-sm-75 { width: 75% !important;}
+    .w-sm-100 { width: 100% !important;}
+
+    .search-field button {
+        padding: 5px 10px !important;
+    }
+
+    .nav-book-btn {
+        width: fit-content !important;
+        font-weight: 400 !important;
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+    /*Font Size*/
+    .f-md-10 {font-size: 10px !important;}
+    .f-md-12 {font-size: 12px !important;}
+    .f-md-14 {font-size: 14px !important;}
+    .f-md-16 {font-size: 16px !important;}
+    .f-md-18 {font-size: 18px !important;}
+    .f-md-19 {font-size: 19px !important;}
+    .f-md-20 {font-size: 20px !important;}
+    .f-md-22 {font-size: 22px !important;}
+    .f-md-24 {font-size: 24px !important;}
+
+    .w-md-25 { width: 25% !important;}
+    .w-md-50 { width: 50% !important;}
+    .w-md-75 { width: 75% !important;}
+    .w-md-100 { width: 100% !important;}
+
+    .nav-book-btn {
+        width: fit-content !important;
+        font-weight: 400 !important;
+    }
+}
+
+/* Large Devices, Tablets / Desktops */
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+
+    /*Font Size*/
+    .f-lg-10 {font-size: 10px !important;}
+    .f-lg-12 {font-size: 12px !important;}
+    .f-lg-14 {font-size: 14px !important;}
+    .f-lg-16 {font-size: 16px !important;}
+    .f-lg-18 {font-size: 18px !important;}
+    .f-lg-19 {font-size: 19px !important;}
+    .f-lg-20 {font-size: 20px !important;}
+    .f-lg-22 {font-size: 22px !important;}
+    .f-lg-24 {font-size: 24px !important;}
+
+    .w-lg-25 { width: 25% !important;}
+    .w-lg-50 { width: 50% !important;}
+    .w-lg-75 { width: 75% !important;}
+    .w-lg-100 { width: 100% !important;}
+
+    .nav-book-btn {
+        width: fit-content !important;
+        font-weight: 400 !important;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1365px) {
+    .w-lg-25 { width: 25% !important;}
+    .w-lg-50 { width: 50% !important;}
+    .w-lg-75 { width: 75% !important;}
+    .w-lg-100 { width: 100% !important;}
+}
+
+/* (1366x768) Desktop OLD */
+@media (min-width: 1366px) and (max-width: 1399px) {
+    .w-lg-25 { width: 25% !important;}
+    .w-lg-50 { width: 50% !important;}
+    .w-lg-75 { width: 75% !important;}
+    .w-lg-100 { width: 100% !important;}
+}
+
+/* Mac Book */
+@media only screen and (min-width: 1400px) and (max-width: 1919px) {
+    .w-xl-25 { width: 25% !important;}
+    .w-xl-50 { width: 50% !important;}
+    .w-xl-75 { width: 75% !important;}
+    .w-xl-100 { width: 100% !important;}
+}
+
+/* Laptop / Desktop New */
+@media only screen and (min-width: 1920px) and (max-width: 2499.5px) {
+    .w-xl-25 { width: 25% !important;}
+    .w-xl-50 { width: 50% !important;}
+    .w-xl-75 { width: 75% !important;}
+    .w-xl-100 { width: 100% !important;}
+}
+
+/* 2K / 4K Laptop / Desktop*/
+@media (min-width: 2500px) {
+    .w-xl-25 { width: 25% !important;}
+    .w-xl-50 { width: 50% !important;}
+    .w-xl-75 { width: 75% !important;}
+    .w-xl-100 { width: 100% !important;}
+}

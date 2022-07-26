@@ -1,0 +1,38 @@
+#preloader {
+    background: url("global_assets/images/preloader.gif") no-repeat center center;
+    background-color: #ffffff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 9999999;
+}
+
+.navbar-brand img {
+    height: 1.5rem;
+}
+
+.f-12 { font-size: 12px;}
+.f-14 { font-size: 14px;}
+.f-16 { font-size: 16px;}
+.f-18 { font-size: 18px;}
+.f-20 { font-size: 20px;}
+.f-22 { font-size: 22px;}
+.f-24 { font-size: 24px;}
+.f-26 { font-size: 26px;}
+.f-28 { font-size: 28px;}
+.f-30 { font-size: 30px;}
+.f-32 { font-size: 32px;}
+.f-40 { font-size: 40px;}
+.f-50 { font-size: 50px;}
+.f-60 { font-size: 60px;}
+.f-80 { font-size: 80px;}
+
+
+/* Rules for sizing the icon. */
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+.material-icons.md-60 { font-size: 60px; }
