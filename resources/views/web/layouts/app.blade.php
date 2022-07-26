@@ -107,6 +107,9 @@
     <script src="{{ asset('web/js/wow.js') }}"></script>
     <script src="{{ asset('admin/assets/js/customer-register.js') }}" rel="application/javascript"></script>
     <script src="{{ asset('web/js/theme.js') }}"></script>
+    <script type="text/javascript">
+        var base_url = "{{url('/')}}";
+    </script>
 
 </body>
 

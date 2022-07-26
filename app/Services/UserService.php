@@ -74,7 +74,7 @@ class UserService extends Service
     public function update(array $data, $id)
     {
         $data = Arr::only($data, ['phone', 'password']);
-        if(isset($data['password'])) {
+        if (isset($data['password'])) {
             $data['password'] = Hash::make($data['password']);
         }
 

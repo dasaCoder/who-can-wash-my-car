@@ -7,9 +7,29 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Request;
+use App\Services\UserService;
+use App\Services\OtpCodeService;
 
 class AuthController extends Controller
 {
+    /**
+     * @var UserService
+     */
+    private $userService;
+
+    /**
+     * @var OtpCodeService
+     */
+    private $otpCodeService;
+
+    function __construct(
+        UserService $userService,
+        OtpCodeService $otpCodeService
+    ) {
+        $this->userService = $userService;
+        $this->otpCodeService = $otpCodeService;
+    }
+
     /**
      * @param  RegisterRequest  $request
      * @return \Illuminate\Http\JsonResponse
@@ -23,24 +43,34 @@ class AuthController extends Controller
     {
         DB::beginTransaction();
         try {
-
+            $request->merge(['username' => $request->email]);
+            // dd($request->all());
             if ($request->customer_role == 'PRO_PARTNER') {
-                $proPartner = $this->userService->create($request->validated())->assignRole('pro-partner'); //Create pro partner and assign role
+                $proPartner = $this->userService->create($request->all())->assignRole('pro-partner'); //Create pro partner and assign role
             } else {
                 // for nomal customer login
             }
 
             DB::commit();
+
+            $this->sendOTP(['phone' => $request->phone]);
+
             return view(
-                'web.blog-details',
+                'web.auth.otp-verification',
                 [
-                    'blog' => $blog
+                    'user' => $proPartner
                 ]
             );
         } catch (\Exception $ex) {
             DB::rollback();
             Log::error($ex);
+            dd($ex);
             return $this->sendResponse('error', $ex->getMessage(), [], 500);
         }
+    }
+
+    public function sendOTP($data)
+    {
+        $this->otpCodeService->otpSend($data);
     }
 }
