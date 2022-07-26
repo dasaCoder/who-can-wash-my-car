@@ -5,6 +5,7 @@ use App\Http\Controllers\Web\FaqController;
 use App\Http\Controllers\Web\HomePageController;
 use App\Http\Controllers\Web\BlogPageController;
 use App\Http\Controllers\Web\BlogDetailsPageController;
+use App\Http\Controllers\Web\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -64,5 +65,6 @@ Route::get('/registerr', function () {
     return view('web.register');
 });
 
-require __DIR__.'/auth.php';
+Route::post('/register/pro-customer', [AuthController::class, 'register']);
 
+require __DIR__ . '/auth.php';
